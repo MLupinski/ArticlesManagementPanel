@@ -1,0 +1,38 @@
+<?php require_once "src/view/template/index.template.html"; ?>
+    <div class="content">
+        <div class="message"></div>
+        <table class="table-form">
+            <thead>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Data utworzenia</th>
+                <th>Data edycji</th>
+                <th>Akcje</th>
+            </thead>
+            <tbody id='form-body'>
+            </tbody>
+        </table>
+        <div id="add-author" style="width: 100%;">
+            <button class="add-button">Dodaj autora</button>
+        </div>
+        <div id="author-action-modal">
+            <div id="author-action-body">
+                <form id="modal-form">
+                    <input type="hidden" class="save-or-edit" name="id" value=""/>
+                    <input type="hidden" class="author-id" name="id" value=""/>
+                    <label>Imię autora</label>
+                    <input class='author-name' type=text name="author-name" value="" />
+                    <label>Nazwisko autora</label>
+                    <input class='author-surname' type=text name="author-surname" value="" />
+                    <div class="modal-buttons">
+                        <a href="#" id="save-modal">Zapisz</a>
+                        <a href="#" id="close-modal">Zamknij</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="/" class="add-button">Powrót</a>
+    </div>
+    <script src="/public/js/authors.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<?php require_once "src/view/template/index.template.html"; ?>
+    <div class="content">
+        <div class="message"></div>
+        <table class="table-form">
+            <thead>
+                <th>Nazwa artykułu</th>
+                <th>Treść</th>
+                <th>Autor</th>
+                <th>Data utworzenia</th>
+                <th>Data edycji</th>
+                <th>Akcje</th>
+            </thead>
+            <tbody id='form-body'>
+            </tbody>
+        </table>
+        <div id="add-article" style="width: 100%;">
+            <button class="add-button">Dodaj artykuł</button>
+        </div>
+        <div id="article-action-modal">
+            <div id="article-action-body">
+                <form id="modal-form">
+                    <input type="hidden" class="save-or-edit" name="id" value=""/>
+                    <input type="hidden" class="article-id" name="id" value=""/>
+                    <label>Nazwa artykułu</label>
+                    <input class='article-name' type=text name="article-name" value="" />
+                    <label>Treść artykułu</label>
+                    <textarea rows=20 cols=120 class='article-content' name="article-content"></textarea>
+                    <label>Autor artykułu</label>
+                    <select class='article-author' name='article-author'></select>
+                    <div class="modal-buttons">
+                        <a href="#" id="save-modal">Zapisz</a>
+                        <a href="#" id="close-modal">Zamknij</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="/" class="add-button">Powrót</a>
+    </div>
+    <script src="/public/js/article.js"></script>
+</body>
+</html>
